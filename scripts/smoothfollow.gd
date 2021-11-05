@@ -1,6 +1,6 @@
 extends Node2D
 # Camera follow script inspired by Hotline Miami.
-# The camera follows the smoothly player in a set boundary.
+# The camera follows the player smoothly in a set boundary.
 # TODO: Fix jitter when moving cursor across player.
 
 # Declarations
