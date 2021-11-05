@@ -8,6 +8,8 @@ extends KinematicBody2D
 const MOVE_SPEED = 165.0
 
 var velocity = Vector2.ZERO
+# Test
+
 
 onready var cursor = get_node("../Cursor")
 onready var body = $Body
