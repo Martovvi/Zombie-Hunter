@@ -55,6 +55,10 @@ extents = Vector2( 10.8596, 264.174 )
 extents = Vector2( 341.899, 11.4583 )
 
 [node name="PlaceholderWorld" type="Node2D"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="Walls" type="StaticBody2D" parent="."]
 __meta__ = {
@@ -180,7 +184,7 @@ position = Vector2( 296.09, -183.079 )
 rotation = -1.56984
 
 [node name="CouchProp3" parent="." instance=ExtResource( 4 )]
-position = Vector2( -377.162, 105.14 )
+position = Vector2( -377.162, 112.204 )
 rotation = -1.56177
 
 [node name="BathtubProp" parent="." instance=ExtResource( 5 )]
