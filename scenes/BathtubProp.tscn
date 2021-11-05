@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/sprites/textures/props1.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/textures/propshadows1.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 34.8414
+height = 82.7038
+
+[node name="BathtubProp" type="StaticBody2D"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 3.25, 3.25 )
+texture = ExtResource( 1 )
+hframes = 16
+vframes = 9
+frame = 3
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite_Shadow" type="Sprite" parent="Sprite"]
+position = Vector2( 3.884, 0 )
+z_index = -1
+texture = ExtResource( 2 )
+hframes = 16
+vframes = 9
+frame = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -4.138, -3.935 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
