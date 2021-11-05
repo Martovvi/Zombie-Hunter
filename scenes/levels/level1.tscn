@@ -1,0 +1,364 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://assets/sprites/textures/level1_walls.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/textures/level1_floor.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/textures/level1_shadows.png" type="Texture" id=3]
+[ext_resource path="res://scenes/props/prop_couch.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/props/prop_bathtub.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/props/prop_table.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/props/prop_lamp.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/props/prop_chair.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/props/prop_coffeetable.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/props/prop_smalltable.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/props/prop_barchair.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/props/prop_smallfridge.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/props/prop_tv.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/props/prop_vase.tscn" type="PackedScene" id=14]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 872.662, 14.0474 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10.491, 537.491 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 439.01, 14.0895 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 13.142, 166.768 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 13.7474, 60.7707 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 374.172, 11.6799 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 13.1269, 418.348 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 1135.78, 11.8493 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 115.58, 11.9859 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 13.7929, 38.5095 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 14.6714, 38.0927 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 115.843, 11.4247 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 263.228, 12.4824 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 10, 268.727 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 10.8596, 264.174 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 341.899, 11.4583 )
+
+[node name="Level1" type="Node2D"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Walls" type="StaticBody2D" parent="."]
+visible = false
+scale = Vector2( 0.286, 0.286 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Wall3" type="CollisionShape2D" parent="Walls"]
+position = Vector2( -272.589, -580.827 )
+z_index = 5
+shape = SubResource( 1 )
+
+[node name="Wall2" type="CollisionShape2D" parent="Walls"]
+position = Vector2( -1154.38, -57.397 )
+z_index = 5
+shape = SubResource( 2 )
+
+[node name="Wall1" type="CollisionShape2D" parent="Walls"]
+position = Vector2( -704.849, 160.733 )
+z_index = 5
+shape = SubResource( 3 )
+
+[node name="Wall4" type="CollisionShape2D" parent="Walls"]
+position = Vector2( 612.694, -500.907 )
+z_index = 5
+shape = SubResource( 4 )
+
+[node name="Wall5" type="CollisionShape2D" parent="Walls"]
+position = Vector2( 612.447, -202.741 )
+z_index = 5
+shape = SubResource( 5 )
+
+[node name="Wall6" type="CollisionShape2D" parent="Walls"]
+position = Vector2( 955.688, -130.007 )
+z_index = 5
+shape = SubResource( 6 )
+
+[node name="Wall7" type="CollisionShape2D" parent="Walls"]
+position = Vector2( 175.11, 49.188 )
+z_index = 5
+shape = SubResource( 7 )
+
+[node name="Wall8" type="CollisionShape2D" parent="Walls"]
+position = Vector2( -28.456, 479.287 )
+z_index = 5
+shape = SubResource( 8 )
+
+[node name="Wall9" type="CollisionShape2D" parent="Walls"]
+position = Vector2( 302.549, -130.611 )
+z_index = 5
+shape = SubResource( 9 )
+
+[node name="Wall10" type="CollisionShape2D" parent="Walls"]
+position = Vector2( 430.826, -103.245 )
+z_index = 5
+shape = SubResource( 10 )
+
+[node name="Wall11" type="CollisionShape2D" parent="Walls"]
+position = Vector2( 570.658, -101.954 )
+z_index = 5
+shape = SubResource( 11 )
+
+[node name="Wall12" type="CollisionShape2D" parent="Walls"]
+position = Vector2( 302.563, -80.352 )
+z_index = 5
+shape = SubResource( 12 )
+
+[node name="Wall13" type="CollisionShape2D" parent="Walls"]
+position = Vector2( 846.058, -80.913 )
+z_index = 5
+shape = SubResource( 13 )
+
+[node name="Wall14" type="CollisionShape2D" parent="Walls"]
+position = Vector2( 1092.13, 200.198 )
+z_index = 5
+shape = SubResource( 14 )
+
+[node name="Wall15" type="CollisionShape2D" parent="Walls"]
+position = Vector2( 1319.59, -404.09 )
+z_index = 5
+shape = SubResource( 15 )
+
+[node name="Wall16" type="CollisionShape2D" parent="Walls"]
+position = Vector2( 967.601, -657.631 )
+z_index = 5
+shape = SubResource( 16 )
+
+[node name="Level1Floors" type="Sprite" parent="."]
+z_index = -3
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Level1Walls" type="Sprite" parent="."]
+position = Vector2( -7, -25 )
+z_index = 3
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Level1Shadows" type="Sprite" parent="Level1Walls"]
+modulate = Color( 0, 0, 0, 0.533333 )
+position = Vector2( 13, 23 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="Furniture" type="Node2D" parent="."]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Couch" parent="Furniture" instance=ExtResource( 4 )]
+position = Vector2( -298.231, -95.6627 )
+rotation = 6.28517
+
+[node name="Couch2" parent="Furniture" instance=ExtResource( 4 )]
+position = Vector2( -297.189, -48.378 )
+rotation = -0.000591993
+
+[node name="Couch3" parent="Furniture" instance=ExtResource( 4 )]
+position = Vector2( -275.221, 1.19205 )
+rotation = -0.815523
+
+[node name="SpriteShadow" parent="Furniture/Couch3/Sprite" index="0"]
+position = Vector2( 1.302, 3.637 )
+
+[node name="Couch4" parent="Furniture" instance=ExtResource( 4 )]
+position = Vector2( -218.037, 17.4616 )
+rotation = -1.57332
+
+[node name="SpriteShadow" parent="Furniture/Couch4/Sprite" index="0"]
+position = Vector2( -2.1, 2.383 )
+
+[node name="Bathtub" parent="Furniture" instance=ExtResource( 5 )]
+position = Vector2( 71, 107 )
+
+[node name="Table" parent="Furniture" instance=ExtResource( 6 )]
+position = Vector2( -243.013, -48.5465 )
+
+[node name="Table2" parent="Furniture" instance=ExtResource( 6 )]
+position = Vector2( -243.294, -82.7816 )
+
+[node name="Lamp" parent="Furniture" instance=ExtResource( 7 )]
+position = Vector2( -244.135, -87.8326 )
+
+[node name="Chair" parent="Furniture" instance=ExtResource( 8 )]
+position = Vector2( -210.624, -86.3074 )
+rotation = -2.21475
+
+[node name="SpriteShadow" parent="Furniture/Chair/Sprite" index="0"]
+position = Vector2( -2.7556, -0.00234222 )
+
+[node name="CoffeeTable" parent="Furniture" instance=ExtResource( 9 )]
+position = Vector2( -187.94, -67.2717 )
+rotation = -0.421024
+
+[node name="SmallTable" parent="Furniture" instance=ExtResource( 10 )]
+position = Vector2( -182.475, -20.3917 )
+rotation = 0.293186
+
+[node name="SpriteShadow" parent="Furniture/SmallTable/Sprite" index="0"]
+position = Vector2( 1.36719, -1.04424 )
+
+[node name="Table3" parent="Furniture" instance=ExtResource( 6 )]
+position = Vector2( -214.002, -24.5809 )
+rotation = -1.08646
+
+[node name="SpriteShadow" parent="Furniture/Table3/Sprite" index="0"]
+position = Vector2( -0.750931, 1.94797 )
+
+[node name="Barchair" parent="Furniture" instance=ExtResource( 11 )]
+position = Vector2( -223.03, -52.3842 )
+rotation = -1.43715
+
+[node name="SpriteShadow" parent="Furniture/Barchair/Sprite" index="0"]
+position = Vector2( -0.146576, 2.75017 )
+
+[node name="Barchair2" parent="Furniture" instance=ExtResource( 11 )]
+position = Vector2( -206.164, -39.2882 )
+rotation = -2.40387
+
+[node name="SpriteShadow" parent="Furniture/Barchair2/Sprite" index="0"]
+position = Vector2( -1.44109, 0.440933 )
+
+[node name="Table4" parent="Furniture" instance=ExtResource( 6 )]
+position = Vector2( -141.088, -154.836 )
+rotation = -1.57604
+
+[node name="SmallFridge" parent="Furniture" instance=ExtResource( 12 )]
+position = Vector2( -134.974, -154.323 )
+
+[node name="TV" parent="Furniture" instance=ExtResource( 13 )]
+position = Vector2( -244.371, -53.2975 )
+rotation = 1.57064
+
+[node name="SpriteShadow" parent="Furniture/TV/Sprite" index="0"]
+position = Vector2( 1.42543, -7.28436 )
+
+[node name="Vase" parent="Furniture" instance=ExtResource( 14 )]
+position = Vector2( -106.148, 32.128 )
+rotation = 0.0154603
+
+[node name="SpriteShadow" parent="Furniture/Vase/Sprite" index="0"]
+position = Vector2( 1.56485, 1.94322 )
+
+[node name="Bathtub2" parent="Furniture" instance=ExtResource( 5 )]
+position = Vector2( 126.154, 106.293 )
+
+[node name="Lamp2" parent="Furniture" instance=ExtResource( 7 )]
+position = Vector2( 98.3562, 123.252 )
+
+[node name="Couch5" parent="Furniture" instance=ExtResource( 4 )]
+position = Vector2( 84.6133, -51.0166 )
+rotation = -1.57332
+
+[node name="CoffeeTable2" parent="Furniture" instance=ExtResource( 9 )]
+position = Vector2( 83.2864, -65.2405 )
+rotation = -1.57659
+
+[node name="SpriteShadow" parent="Furniture/CoffeeTable2/Sprite" index="0"]
+position = Vector2( -0.874069, 2.63216 )
+
+[node name="Table5" parent="Furniture" instance=ExtResource( 6 )]
+position = Vector2( 273.171, -108.381 )
+rotation = 0.00480862
+
+[node name="Table6" parent="Furniture" instance=ExtResource( 6 )]
+position = Vector2( 273.171, -139.339 )
+rotation = 0.00480862
+
+[node name="Table7" parent="Furniture" instance=ExtResource( 6 )]
+position = Vector2( 273.171, -77.4219 )
+rotation = 0.00480862
+
+[node name="Chair3" parent="Furniture" instance=ExtResource( 8 )]
+position = Vector2( 254.128, -138.415 )
+rotation = -4.78123
+
+[node name="Chair5" parent="Furniture" instance=ExtResource( 8 )]
+position = Vector2( 253.613, -100.055 )
+rotation = -4.68795
+
+[node name="Chair7" parent="Furniture" instance=ExtResource( 8 )]
+position = Vector2( 253.473, -69.6767 )
+rotation = -4.6789
+
+[node name="Chair9" parent="Furniture" instance=ExtResource( 8 )]
+position = Vector2( 291.431, -129.694 )
+rotation = -1.57182
+
+[node name="Chair11" parent="Furniture" instance=ExtResource( 8 )]
+position = Vector2( 291.273, -100.086 )
+rotation = -1.56118
+
+[node name="Chair13" parent="Furniture" instance=ExtResource( 8 )]
+position = Vector2( 291.588, -70.3202 )
+rotation = -1.56118
+
+[node name="Vase2" parent="Furniture" instance=ExtResource( 14 )]
+position = Vector2( 191.108, -173.261 )
+rotation = 0.0154603
+
+[node name="Vase3" parent="Furniture" instance=ExtResource( 14 )]
+position = Vector2( 360.549, -174.312 )
+rotation = 0.0154603
+
+[node name="Vase4" parent="Furniture" instance=ExtResource( 14 )]
+position = Vector2( 190.898, -51.5412 )
+rotation = 0.0154603
+
+[node name="Vase5" parent="Furniture" instance=ExtResource( 14 )]
+position = Vector2( 361.951, -51.3185 )
+rotation = 0.0154603
+
+[editable path="Furniture/Couch"]
+[editable path="Furniture/Couch2"]
+[editable path="Furniture/Couch3"]
+[editable path="Furniture/Couch4"]
+[editable path="Furniture/Bathtub"]
+[editable path="Furniture/Chair"]
+[editable path="Furniture/SmallTable"]
+[editable path="Furniture/Table3"]
+[editable path="Furniture/Barchair"]
+[editable path="Furniture/Barchair2"]
+[editable path="Furniture/TV"]
+[editable path="Furniture/Vase"]
+[editable path="Furniture/CoffeeTable2"]

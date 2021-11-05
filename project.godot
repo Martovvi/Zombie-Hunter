@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Zombie Hunter"
-run/main_scene="res://Game.tscn"
+run/main_scene="res://game.tscn"
 config/icon="res://icon.png"
 
 [debug]

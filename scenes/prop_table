@@ -1,0 +1,8 @@
+[gd_scene format=2]
+
+[node name="TableProp" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="Sprite_Shadow" type="Sprite" parent="Sprite"]
+z_index = -1
