@@ -55,11 +55,9 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0, -0.132431 )
-scale = Vector2( 2.25, 2.25 )
 z_index = 5
 frames = SubResource( 10 )
 animation = "cursorMove"
-frame = 5
+frame = 4
 playing = true
 offset = Vector2( 0, -1 )

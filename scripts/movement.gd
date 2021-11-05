@@ -5,7 +5,7 @@ extends KinematicBody2D
 # Player rotation is based on the position of the cursor.
 
 # Declarations.
-const MOVE_SPEED = 425.0
+const MOVE_SPEED = 165.0
 
 var velocity = Vector2.ZERO
 

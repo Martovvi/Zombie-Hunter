@@ -4,8 +4,8 @@
 [ext_resource path="res://assets/sprites/textures/propshadows1.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 34.8414
-height = 82.7038
+radius = 11.507
+height = 25.167
 
 [node name="BathtubProp" type="StaticBody2D"]
 __meta__ = {
@@ -14,7 +14,6 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 3.25, 3.25 )
 texture = ExtResource( 1 )
 hframes = 16
 vframes = 9
@@ -25,16 +24,20 @@ __meta__ = {
 }
 
 [node name="Sprite_Shadow" type="Sprite" parent="Sprite"]
-position = Vector2( 3.884, 0 )
+position = Vector2( 3, 0 )
 z_index = -1
 texture = ExtResource( 2 )
 hframes = 16
 vframes = 9
 frame = 3
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2( -4.138, -3.935 )
+position = Vector2( -1.172, -1.033 )
 shape = SubResource( 1 )
 __meta__ = {
 "_edit_group_": true,

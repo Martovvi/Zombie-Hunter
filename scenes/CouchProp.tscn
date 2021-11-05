@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/sprites/textures/props1.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 24.1663, 66.9759 )
+extents = Vector2( 7.36188, 20.3216 )
 
 [node name="CouchProp" type="StaticBody2D"]
 __meta__ = {
@@ -13,7 +13,6 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 3.25, 3.25 )
 texture = ExtResource( 2 )
 hframes = 21
 vframes = 10
@@ -23,15 +22,19 @@ __meta__ = {
 }
 
 [node name="Sprite_Shadow" type="Sprite" parent="Sprite"]
-position = Vector2( 3.82633, 0 )
+position = Vector2( 4, 0 )
 z_index = -1
 texture = ExtResource( 1 )
 hframes = 19
 vframes = 10
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2( -4.513, 5.075 )
+position = Vector2( -1.445, 1.435 )
 shape = SubResource( 1 )
 __meta__ = {
 "_edit_group_": true,
