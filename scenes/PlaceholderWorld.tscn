@@ -7,143 +7,138 @@
 [ext_resource path="res://scenes/BathtubProp.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 867.983, 12.1659 )
+extents = Vector2( 872.662, 14.0474 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 10.491, 534.751 )
+extents = Vector2( 10.491, 537.491 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 444.723, 9.73019 )
+extents = Vector2( 439.01, 14.0895 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 11.9403, 161.345 )
+extents = Vector2( 13.142, 166.768 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 11.9401, 61.5919 )
+extents = Vector2( 13.7474, 60.7707 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 379.881, 11.6799 )
+extents = Vector2( 374.172, 11.6799 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 13.1269, 418.348 )
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 1117.63, 11.8493 )
+extents = Vector2( 1135.78, 11.8493 )
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 124.765, 11.9859 )
+extents = Vector2( 115.58, 11.9859 )
 
 [sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 14.5519, 38.9251 )
+extents = Vector2( 13.7929, 38.5095 )
 
 [sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 13.4646, 38.9251 )
+extents = Vector2( 14.6714, 38.0927 )
 
 [sub_resource type="RectangleShape2D" id=12]
-extents = Vector2( 119.714, 11.4247 )
+extents = Vector2( 115.843, 11.4247 )
 
 [sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 260.122, 13.4267 )
+extents = Vector2( 263.228, 12.4824 )
 
 [sub_resource type="RectangleShape2D" id=14]
-extents = Vector2( 10, 287.349 )
+extents = Vector2( 10, 268.727 )
 
 [sub_resource type="RectangleShape2D" id=15]
-extents = Vector2( 10.8596, 261.783 )
+extents = Vector2( 10.8596, 264.174 )
 
 [sub_resource type="RectangleShape2D" id=16]
-extents = Vector2( 335.646, 11.4583 )
+extents = Vector2( 341.899, 11.4583 )
 
 [node name="PlaceholderWorld" type="Node2D"]
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
 
 [node name="Walls" type="StaticBody2D" parent="."]
-visible = false
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
 
 [node name="Wall3" type="CollisionShape2D" parent="Walls"]
-position = Vector2( -247.72, -576.648 )
+position = Vector2( -272.589, -580.827 )
 z_index = 5
 shape = SubResource( 1 )
 
 [node name="Wall2" type="CollisionShape2D" parent="Walls"]
-position = Vector2( -1131.97, -57.3969 )
+position = Vector2( -1154.38, -57.397 )
 z_index = 5
 shape = SubResource( 2 )
 
 [node name="Wall1" type="CollisionShape2D" parent="Walls"]
-position = Vector2( -701.137, 153.235 )
+position = Vector2( -704.849, 160.733 )
 z_index = 5
 shape = SubResource( 3 )
 
 [node name="Wall4" type="CollisionShape2D" parent="Walls"]
-position = Vector2( 610.333, -496.954 )
+position = Vector2( 612.694, -500.907 )
 z_index = 5
 shape = SubResource( 4 )
 
 [node name="Wall5" type="CollisionShape2D" parent="Walls"]
-position = Vector2( 609.442, -202.741 )
+position = Vector2( 612.447, -202.741 )
 z_index = 5
 shape = SubResource( 5 )
 
 [node name="Wall6" type="CollisionShape2D" parent="Walls"]
-position = Vector2( 934.359, -133.467 )
+position = Vector2( 955.688, -130.007 )
 z_index = 5
 shape = SubResource( 6 )
 
 [node name="Wall7" type="CollisionShape2D" parent="Walls"]
-position = Vector2( 178.322, 49.1885 )
+position = Vector2( 175.11, 49.188 )
 z_index = 5
 shape = SubResource( 7 )
 
 [node name="Wall8" type="CollisionShape2D" parent="Walls"]
-position = Vector2( -23.2656, 466.222 )
+position = Vector2( -28.456, 479.287 )
 z_index = 5
 shape = SubResource( 8 )
 
 [node name="Wall9" type="CollisionShape2D" parent="Walls"]
-position = Vector2( 320.264, -131.728 )
+position = Vector2( 302.549, -130.611 )
 z_index = 5
 shape = SubResource( 9 )
 
 [node name="Wall10" type="CollisionShape2D" parent="Walls"]
-position = Vector2( 430.826, -107.033 )
+position = Vector2( 430.826, -103.245 )
 z_index = 5
 shape = SubResource( 10 )
 
 [node name="Wall11" type="CollisionShape2D" parent="Walls"]
-position = Vector2( 567.438, -104.391 )
+position = Vector2( 570.658, -101.954 )
 z_index = 5
 shape = SubResource( 11 )
 
 [node name="Wall12" type="CollisionShape2D" parent="Walls"]
-position = Vector2( 310.723, -83.4617 )
+position = Vector2( 302.563, -80.352 )
 z_index = 5
 shape = SubResource( 12 )
 
 [node name="Wall13" type="CollisionShape2D" parent="Walls"]
-position = Vector2( 836.352, -84.651 )
+position = Vector2( 846.058, -80.913 )
 z_index = 5
 shape = SubResource( 13 )
 
 [node name="Wall14" type="CollisionShape2D" parent="Walls"]
-position = Vector2( 1082.19, 186.068 )
+position = Vector2( 1092.13, 200.198 )
 z_index = 5
 shape = SubResource( 14 )
 
 [node name="Wall15" type="CollisionShape2D" parent="Walls"]
-position = Vector2( 1306.76, -402.443 )
+position = Vector2( 1319.59, -404.09 )
 z_index = 5
 shape = SubResource( 15 )
 
 [node name="Wall16" type="CollisionShape2D" parent="Walls"]
-position = Vector2( 961.544, -651.907 )
+position = Vector2( 967.601, -657.631 )
 z_index = 5
 shape = SubResource( 16 )
 
@@ -157,8 +152,8 @@ __meta__ = {
 }
 
 [node name="walls1_placeholder" type="Sprite" parent="."]
-position = Vector2( -18.7144, -91.4121 )
-scale = Vector2( 3.45119, 3.44607 )
+position = Vector2( -24.32, -87.5 )
+scale = Vector2( 3.5, 3.5 )
 z_index = 3
 texture = ExtResource( 1 )
 __meta__ = {
@@ -168,8 +163,7 @@ __meta__ = {
 
 [node name="walls1_shadows" type="Sprite" parent="walls1_placeholder"]
 modulate = Color( 0, 0, 0, 0.533333 )
-position = Vector2( 11.1754, 18.7522 )
-scale = Vector2( 0.991715, 0.978015 )
+position = Vector2( 13.229, 18.752 )
 z_index = -1
 texture = ExtResource( 3 )
 __meta__ = {
