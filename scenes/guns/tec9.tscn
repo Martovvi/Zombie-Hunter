@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/sprites/sprite_tec9small.png" type="Texture" id=1]
+[ext_resource path="res://scripts/tec9.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 7.6777
+
+[node name="Tec9" type="RigidBody2D"]
+rotation = 1.22173
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )

@@ -1,10 +1,11 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://assets/sprites/sprite_playersheet.png" type="Texture" id=1]
 [ext_resource path="res://scenes/camera.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/sprites/sprite_playersheet2.png" type="Texture" id=3]
 [ext_resource path="res://scripts/movement.gd" type="Script" id=4]
 [ext_resource path="res://assets/sprites/sprite_tec9shootingsheet.png" type="Texture" id=5]
+[ext_resource path="res://assets/sounds/tec9shot.mp3" type="AudioStream" id=6]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 3 )
@@ -100,7 +101,9 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 5.84653, 8.7104 )
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=[
+"player",
+]]
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true,
@@ -114,7 +117,6 @@ target = NodePath("..")
 [node name="Body" type="AnimatedSprite" parent="."]
 rotation = 1.5708
 frames = SubResource( 11 )
-animation = "shootingtec9"
 
 [node name="Legs" type="AnimatedSprite" parent="."]
 rotation = 1.5708
@@ -125,3 +127,11 @@ animation = "idle"
 [node name="Collider" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource( 18 )
+
+[node name="BulletPoint" type="Node2D" parent="."]
+position = Vector2( 40, 0 )
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="GunSounds" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource( 6 )

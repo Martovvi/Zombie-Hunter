@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/tec9shot.mp3-4f2c4335dcc376c89793d88c08f1ae42.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/tec9shot.mp3"
+dest_files=[ "res://.import/tec9shot.mp3-4f2c4335dcc376c89793d88c08f1ae42.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

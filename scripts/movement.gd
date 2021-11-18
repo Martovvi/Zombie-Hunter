@@ -9,12 +9,20 @@ const MOVE_SPEED = 165.0
 
 var velocity = Vector2.ZERO
 
+# Shooting
+var can_fire = true
+var bullet_speed = 1000
+var fire_rate = 0.05
+
 onready var cursor = get_node("../Cursor")
 onready var body = $Body
 onready var legs = $Legs
+onready var bullet = preload("res://scenes/guns/bullet.tscn")
+onready var gun_sound = $Sounds/GunSounds
 
 # Checks for input (W, A, S, D) and velocity for player movement.
 func get_input():
+	# Movement
 	velocity = Vector2.ZERO
 	if Input.is_action_pressed("ui_up"):
 		velocity.y = -1
@@ -26,15 +34,32 @@ func get_input():
 		velocity.x = 1
 	
 	velocity = velocity.normalized() * MOVE_SPEED
+	
+	# Shooting
+	if Input.is_action_pressed("fire") and can_fire:
+		var bullet_instance = bullet.instance()
+		bullet_instance.position = $BulletPoint.get_global_position()
+		bullet_instance.rotation_degrees = rotation_degrees
+		bullet_instance.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(rotation))
+		get_tree().get_root().add_child(bullet_instance)
+		can_fire = false
+		yield(get_tree().create_timer(fire_rate), "timeout")
+		can_fire = true
 
 # Animations controller for various player based animations.
 func animations_controller():
-	if(velocity != Vector2.ZERO):
+	if(velocity != Vector2.ZERO) and !Input.is_action_pressed("fire"):
 		body.play("default")
 		legs.play("default")
-	else:
-		body.stop()
+	if(velocity != Vector2.ZERO) and Input.is_action_pressed("fire"):
+		legs.play("default")
+	if(velocity == Vector2.ZERO) and Input.is_action_pressed("fire"):
 		legs.stop()
+		legs.play("idle")
+	if(Input.is_action_pressed("fire")):
+		body.play("shootingtec9")
+		gun_sound.play()
+	elif(velocity == Vector2.ZERO):
 		body.play("idle")
 		legs.play("idle")
 

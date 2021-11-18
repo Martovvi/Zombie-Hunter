@@ -1,4 +1,5 @@
 extends Label
+# Shows the FPS in the top left corner as a HUD.
 
 # Timestamps of frames rendered in the last second.
 var times := []
