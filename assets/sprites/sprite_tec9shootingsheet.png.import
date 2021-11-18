@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sprite_playershootingsheet.png-44e10e9ff30757d7247ec0534754572d.stex"
+path="res://.import/sprite_tec9shootingsheet.png-8c74d578906d8595f78bb0836e3f012b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/sprite_playershootingsheet.png"
-dest_files=[ "res://.import/sprite_playershootingsheet.png-44e10e9ff30757d7247ec0534754572d.stex" ]
+source_file="res://assets/sprites/sprite_tec9shootingsheet.png"
+dest_files=[ "res://.import/sprite_tec9shootingsheet.png-8c74d578906d8595f78bb0836e3f012b.stex" ]
 
 [params]
 
