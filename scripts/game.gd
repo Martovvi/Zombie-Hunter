@@ -9,6 +9,3 @@ func _ready():
 func _process(delta):
 	if Input.is_action_pressed("ui_cancel"):
 		get_tree().quit()
-
-func play_sound(sound):
-	pass
