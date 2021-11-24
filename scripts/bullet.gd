@@ -9,3 +9,6 @@ func _on_Bullet_body_entered(body):
 		impact_instance.position = get_global_position()
 		get_tree().get_root().add_child(impact_instance)
 		queue_free()
+	if body.has_method("hit"): # Check for node hit by bullet if it has a hit() method and invoke it.
+		body.hit()
+		queue_free()

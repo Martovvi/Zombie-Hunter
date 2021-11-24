@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://assets/sprites/sprite_playersheet.png" type="Texture" id=1]
 [ext_resource path="res://scenes/camera.tscn" type="PackedScene" id=2]
@@ -101,6 +101,9 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 5.84653, 8.7104 )
 
+[sub_resource type="CircleShape2D" id=19]
+radius = 9.75909
+
 [node name="Player" type="KinematicBody2D" groups=[
 "player",
 ]]
@@ -135,3 +138,10 @@ position = Vector2( 40, 0 )
 
 [node name="GunSounds" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 6 )
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource( 19 )
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_Hitbox_body_entered"]

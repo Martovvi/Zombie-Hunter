@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://assets/sprites/textures/level1_walls.png" type="Texture" id=1]
 [ext_resource path="res://assets/sprites/textures/level1_floor.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://scenes/props/prop_smallfridge.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/props/prop_tv.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/props/prop_vase.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/enemy.tscn" type="PackedScene" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 872.662, 14.0474 )
@@ -348,6 +349,24 @@ rotation = 0.0154603
 [node name="Vase5" parent="Furniture" instance=ExtResource( 14 )]
 position = Vector2( 361.951, -51.3185 )
 rotation = 0.0154603
+
+[node name="Enemy" parent="." instance=ExtResource( 15 )]
+position = Vector2( -240.32, -136.307 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 15 )]
+position = Vector2( -247.447, -7.34992 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 15 )]
+position = Vector2( -83.5217, -127.399 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 15 )]
+position = Vector2( 151.898, -128.958 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 15 )]
+position = Vector2( 343.682, -123.714 )
+
+[node name="Enemy6" parent="." instance=ExtResource( 15 )]
+position = Vector2( 216.7, 63.2003 )
 
 [editable path="Furniture/Couch"]
 [editable path="Furniture/Couch2"]

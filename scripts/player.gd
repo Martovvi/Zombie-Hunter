@@ -1,8 +1,10 @@
 class_name Player
 extends KinematicBody2D
-# Movement script for handling player movement and animations.
+# Player script for handling player movement and animations.
 # The player can move with  WASD or arrow keys.
 # Player rotation is based on the position of the cursor.
+# The player can die when a zombie is too close.
+# The player can shoot a gun with left mouse button.
 
 # Declarations.
 const MOVE_SPEED = 195.0
@@ -15,8 +17,8 @@ var bullet_speed = 1000
 var fire_rate = 0.05
 
 onready var cursor = get_node("../Cursor")
-onready var body = $Body
-onready var legs = $Legs
+onready var player_body = $Body
+onready var player_legs = $Legs
 onready var bullet = preload("res://scenes/guns/bullet.tscn")
 onready var gun_sound = $Sounds/GunSounds
 
@@ -49,43 +51,47 @@ func get_input():
 # Animations controller for various player based animations.
 func animations_controller():
 	if(velocity != Vector2.ZERO) and !Input.is_action_pressed("fire"):
-		body.play("default")
-		legs.play("default")
+		player_body.play("default")
+		player_legs.play("default")
 	if(velocity != Vector2.ZERO) and Input.is_action_pressed("fire"):
-		legs.play("default")
+		player_legs.play("default")
 	if(velocity == Vector2.ZERO) and Input.is_action_pressed("fire"):
-		legs.stop()
-		legs.play("idle")
+		player_legs.stop()
+		player_legs.play("idle")
 	if(Input.is_action_pressed("fire")):
-		body.play("shootingtec9")
+		player_body.play("shootingtec9")
 		gun_sound.play()
 	elif(velocity == Vector2.ZERO):
-		body.play("idle")
-		legs.play("idle")
+		player_body.play("idle")
+		player_legs.play("idle")
 
  # Rotates legs based on movement direction.
 func rotate_legs():
 	if(velocity.x != 0 && velocity.y == 0):
 		if(velocity.x > 0):
-			legs.set_rotation_degrees(-90)
+			player_legs.set_rotation_degrees(-90)
 		else:
-			legs.set_rotation_degrees(90)
+			player_legs.set_rotation_degrees(90)
 	elif(velocity.x == 0 && velocity.y != 0):
 		if(velocity.y > 0):
-			legs.set_rotation_degrees(0)
+			player_legs.set_rotation_degrees(0)
 		else:
-			legs.set_rotation_degrees(180)
+			player_legs.set_rotation_degrees(180)
 	elif(velocity.x != 0 && velocity.y != 0):
 		if(velocity.x > 0 && velocity.y < 0):
-			legs.set_rotation_degrees(-135)
+			player_legs.set_rotation_degrees(-135)
 		elif(velocity.x < 0 && velocity.y > 0):
-			legs.set_rotation_degrees(45)
+			player_legs.set_rotation_degrees(45)
 		elif(velocity.x > 0 && velocity.y > 0):
-			legs.set_rotation_degrees(-45)
+			player_legs.set_rotation_degrees(-45)
 		elif(velocity.x < 0 && velocity.y < 0):
-			legs.set_rotation_degrees(135)
+			player_legs.set_rotation_degrees(135)
 	else:
-		legs.set_rotation_degrees(0)
+		player_legs.set_rotation_degrees(0)
+
+# Reloads the scene when the player is killed
+func kill():
+	get_tree().reload_current_scene()
 
 # Frame rate is synched to the physics (constant).
 func _physics_process(delta):
@@ -95,3 +101,8 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity)	
 	var look_vec = get_global_mouse_position() - global_position # Vector pointing to the cursor.
 	global_rotation = atan2(look_vec.y, look_vec.x) # Player rotates around the cursor.
+
+# Player dies when a zombie is too close.
+func _on_Hitbox_body_entered(body):
+	if "Enemy" in body.name:
+		kill()

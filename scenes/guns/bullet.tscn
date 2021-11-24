@@ -7,7 +7,9 @@
 radius = 1.5814
 height = 6.29961
 
-[node name="Bullet" type="RigidBody2D"]
+[node name="Bullet" type="RigidBody2D" groups=[
+"bullet",
+]]
 contacts_reported = 1
 contact_monitor = true
 script = ExtResource( 2 )
@@ -16,7 +18,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 3.871, -0.533 )
+position = Vector2( -0.252, -0.533 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
