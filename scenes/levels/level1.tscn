@@ -14,7 +14,7 @@
 [ext_resource path="res://scenes/props/prop_smallfridge.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/props/prop_tv.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/props/prop_vase.tscn" type="PackedScene" id=14]
-[ext_resource path="res://scenes/enemy.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/zombie.tscn" type="PackedScene" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 872.662, 14.0474 )
@@ -65,10 +65,6 @@ extents = Vector2( 10.8596, 264.174 )
 extents = Vector2( 341.899, 11.4583 )
 
 [node name="Level1" type="Node2D"]
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
 
 [node name="Walls" type="StaticBody2D" parent="."]
 visible = false
@@ -323,7 +319,7 @@ position = Vector2( 253.473, -69.6767 )
 rotation = -4.6789
 
 [node name="Chair9" parent="Furniture" instance=ExtResource( 8 )]
-position = Vector2( 291.431, -129.694 )
+position = Vector2( 291.431, -129.917 )
 rotation = -1.57182
 
 [node name="Chair11" parent="Furniture" instance=ExtResource( 8 )]
@@ -350,23 +346,80 @@ rotation = 0.0154603
 position = Vector2( 361.951, -51.3185 )
 rotation = 0.0154603
 
-[node name="Enemy" parent="." instance=ExtResource( 15 )]
+[node name="Zombie" parent="." instance=ExtResource( 15 )]
 position = Vector2( -240.32, -136.307 )
 
-[node name="Enemy2" parent="." instance=ExtResource( 15 )]
+[node name="Zombie2" parent="." instance=ExtResource( 15 )]
 position = Vector2( -247.447, -7.34992 )
 
-[node name="Enemy3" parent="." instance=ExtResource( 15 )]
+[node name="Zombie3" parent="." instance=ExtResource( 15 )]
 position = Vector2( -83.5217, -127.399 )
 
-[node name="Enemy4" parent="." instance=ExtResource( 15 )]
+[node name="Zombie4" parent="." instance=ExtResource( 15 )]
 position = Vector2( 151.898, -128.958 )
 
-[node name="Enemy5" parent="." instance=ExtResource( 15 )]
-position = Vector2( 343.682, -123.714 )
+[node name="Zombie5" parent="." instance=ExtResource( 15 )]
+position = Vector2( 271.866, -51.5835 )
 
-[node name="Enemy6" parent="." instance=ExtResource( 15 )]
+[node name="Zombie6" parent="." instance=ExtResource( 15 )]
 position = Vector2( 216.7, 63.2003 )
+
+[node name="Zombie7" parent="." instance=ExtResource( 15 )]
+position = Vector2( 120.434, 47.8426 )
+
+[node name="Zombie8" parent="." instance=ExtResource( 15 )]
+position = Vector2( 171.376, 104.029 )
+
+[node name="Zombie9" parent="." instance=ExtResource( 15 )]
+position = Vector2( -262.009, 89.0461 )
+
+[node name="Zombie10" parent="." instance=ExtResource( 15 )]
+position = Vector2( -163.121, 93.9156 )
+
+[node name="Zombie11" parent="." instance=ExtResource( 15 )]
+position = Vector2( -78.0919, 93.9156 )
+
+[node name="Zombie12" parent="." instance=ExtResource( 15 )]
+position = Vector2( -122.666, 68.0698 )
+
+[node name="Zombie13" parent="." instance=ExtResource( 15 )]
+position = Vector2( -121.543, 115.266 )
+
+[node name="Zombie14" parent="." instance=ExtResource( 15 )]
+position = Vector2( -212.19, 64.6986 )
+
+[node name="Zombie15" parent="." instance=ExtResource( 15 )]
+position = Vector2( -213.314, 108.15 )
+
+[node name="Zombie16" parent="." instance=ExtResource( 15 )]
+position = Vector2( -296.095, 116.765 )
+
+[node name="Zombie17" parent="." instance=ExtResource( 15 )]
+position = Vector2( -308.457, 68.4444 )
+
+[node name="Zombie18" parent="." instance=ExtResource( 15 )]
+position = Vector2( -298.717, -141.319 )
+
+[node name="Zombie19" parent="." instance=ExtResource( 15 )]
+position = Vector2( -305.46, 9.26125 )
+
+[node name="Zombie20" parent="." instance=ExtResource( 15 )]
+position = Vector2( 226.814, -59.2863 )
+
+[node name="Zombie21" parent="." instance=ExtResource( 15 )]
+position = Vector2( 229.436, -161.92 )
+
+[node name="Zombie22" parent="." instance=ExtResource( 15 )]
+position = Vector2( 317.461, -70.149 )
+
+[node name="Zombie23" parent="." instance=ExtResource( 15 )]
+position = Vector2( -171.736, -107.981 )
+
+[node name="Zombie24" parent="." instance=ExtResource( 15 )]
+position = Vector2( -168.739, -46.1761 )
+
+[node name="Zombie25" parent="." instance=ExtResource( 15 )]
+position = Vector2( -162.746, 11.1341 )
 
 [editable path="Furniture/Couch"]
 [editable path="Furniture/Couch2"]

@@ -12,6 +12,7 @@ const MOVE_SPEED = 195.0
 var velocity = Vector2.ZERO
 
 # Shooting
+var shooting_timer = null
 var can_fire = true
 var bullet_speed = 1000
 var fire_rate = 0.05
@@ -21,6 +22,15 @@ onready var player_body = $Body
 onready var player_legs = $Legs
 onready var bullet = preload("res://scenes/guns/bullet.tscn")
 onready var gun_sound = $Sounds/GunSounds
+
+
+func _ready():
+	# Create timer for shoot delay
+	shooting_timer = Timer.new()
+	shooting_timer.set_one_shot(true)
+	shooting_timer.set_wait_time(fire_rate)
+	shooting_timer.connect("timeout", self, "_on_timeout_complete")
+	add_child(shooting_timer)
 
 # Checks for input (W, A, S, D) and velocity for player movement.
 func get_input():
@@ -45,8 +55,11 @@ func get_input():
 		bullet_instance.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(rotation))
 		get_tree().get_root().add_child(bullet_instance)
 		can_fire = false
-		yield(get_tree().create_timer(fire_rate), "timeout")
-		can_fire = true
+		shooting_timer.start()
+	
+	# Restart Level
+	if Input.is_action_pressed("restart"):
+		kill()
 
 # Animations controller for various player based animations.
 func animations_controller():
@@ -106,3 +119,7 @@ func _physics_process(delta):
 func _on_Hitbox_body_entered(body):
 	if "Enemy" in body.name:
 		kill()
+
+# On Timer's timeout complete
+func _on_timeout_complete():
+	can_fire = true
