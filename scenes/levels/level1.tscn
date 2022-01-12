@@ -26,7 +26,7 @@ extents = Vector2( 10.491, 537.491 )
 extents = Vector2( 439.01, 14.0895 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 13.142, 166.768 )
+extents = Vector2( 13.142, 143.306 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 13.7474, 60.7707 )
@@ -65,12 +65,16 @@ extents = Vector2( 10.8596, 264.174 )
 extents = Vector2( 341.899, 11.4583 )
 
 [node name="Level1" type="Node2D"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="Walls" type="StaticBody2D" parent="."]
-visible = false
 scale = Vector2( 0.286, 0.286 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="Wall3" type="CollisionShape2D" parent="Walls"]
@@ -89,7 +93,7 @@ z_index = 5
 shape = SubResource( 3 )
 
 [node name="Wall4" type="CollisionShape2D" parent="Walls"]
-position = Vector2( 612.694, -500.907 )
+position = Vector2( 612.694, -524.931 )
 z_index = 5
 shape = SubResource( 4 )
 
@@ -170,7 +174,7 @@ __meta__ = {
 
 [node name="Level1Shadows" type="Sprite" parent="Level1Walls"]
 modulate = Color( 0, 0, 0, 0.533333 )
-position = Vector2( 13, 23 )
+position = Vector2( 12.483, 22.196 )
 z_index = -1
 texture = ExtResource( 3 )
 
