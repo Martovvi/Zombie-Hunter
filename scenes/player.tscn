@@ -107,9 +107,7 @@ extents = Vector2( 5.84653, 8.7104 )
 [sub_resource type="CircleShape2D" id=19]
 radius = 9.75909
 
-[node name="Player" type="KinematicBody2D" groups=[
-"player",
-]]
+[node name="Player" type="KinematicBody2D" groups=["player"]]
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true,
@@ -141,6 +139,7 @@ position = Vector2( 40, 0 )
 
 [node name="GunSounds" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 6 )
+volume_db = -8.0
 
 [node name="Hitbox" type="Area2D" parent="."]
 
