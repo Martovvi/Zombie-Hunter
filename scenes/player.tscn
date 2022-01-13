@@ -139,7 +139,7 @@ position = Vector2( 40, 0 )
 
 [node name="GunSounds" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 6 )
-volume_db = -8.0
+volume_db = -7.0
 
 [node name="Hitbox" type="Area2D" parent="."]
 
