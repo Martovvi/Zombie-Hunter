@@ -26,7 +26,7 @@ extents = Vector2( 10.491, 537.491 )
 extents = Vector2( 439.01, 14.0895 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 13.142, 143.306 )
+extents = Vector2( 13.53, 143.357 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 13.7474, 60.7707 )
@@ -93,7 +93,8 @@ z_index = 5
 shape = SubResource( 3 )
 
 [node name="Wall4" type="CollisionShape2D" parent="Walls"]
-position = Vector2( 612.694, -524.931 )
+position = Vector2( 612.306, -524.476 )
+scale = Vector2( 1, 1 )
 z_index = 5
 shape = SubResource( 4 )
 
@@ -161,7 +162,8 @@ shape = SubResource( 16 )
 z_index = -3
 texture = ExtResource( 2 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="Level1Walls" type="Sprite" parent="."]
@@ -169,19 +171,17 @@ position = Vector2( -7, -25 )
 z_index = 3
 texture = ExtResource( 1 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="Level1Shadows" type="Sprite" parent="Level1Walls"]
 modulate = Color( 0, 0, 0, 0.533333 )
-position = Vector2( 12.483, 22.196 )
+position = Vector2( 13, 23 )
 z_index = -1
 texture = ExtResource( 3 )
 
 [node name="Furniture" type="Node2D" parent="."]
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Couch" parent="Furniture" instance=ExtResource( 4 )]
 position = Vector2( -298.231, -95.6627 )
@@ -347,92 +347,70 @@ position = Vector2( 361.951, -51.3185 )
 rotation = 0.0154603
 
 [node name="Zombie" parent="." instance=ExtResource( 15 )]
-position = Vector2( -189.293, -134.102 )
-rotation = 0.586686
+position = Vector2( -212.655, -143.684 )
 
 [node name="Zombie2" parent="." instance=ExtResource( 15 )]
-position = Vector2( -147.913, -17.1143 )
-rotation = 0.935436
+position = Vector2( 71.1602, -124.303 )
 
 [node name="Zombie3" parent="." instance=ExtResource( 15 )]
-position = Vector2( -83.5217, -127.399 )
-rotation = 1.02152
+position = Vector2( -183.16, -140.463 )
 
 [node name="Zombie4" parent="." instance=ExtResource( 15 )]
-position = Vector2( 151.898, -128.958 )
+position = Vector2( 159.466, -152.503 )
 
 [node name="Zombie5" parent="." instance=ExtResource( 15 )]
-position = Vector2( 271.866, -51.5835 )
+position = Vector2( 353.433, -147.445 )
 
 [node name="Zombie6" parent="." instance=ExtResource( 15 )]
-position = Vector2( 216.7, 63.2003 )
+position = Vector2( 257.063, 111.131 )
 
 [node name="Zombie7" parent="." instance=ExtResource( 15 )]
-position = Vector2( 120.434, 47.8426 )
+position = Vector2( 78.3893, 26.8203 )
 
 [node name="Zombie8" parent="." instance=ExtResource( 15 )]
 position = Vector2( 171.376, 104.029 )
 
 [node name="Zombie9" parent="." instance=ExtResource( 15 )]
-position = Vector2( -107.984, -56.1599 )
-rotation = 0.773022
+position = Vector2( 291.301, 109.228 )
 
 [node name="Zombie10" parent="." instance=ExtResource( 15 )]
-position = Vector2( -139.812, -82.1585 )
+position = Vector2( -79.0311, 28.3256 )
 
 [node name="Zombie11" parent="." instance=ExtResource( 15 )]
-position = Vector2( -80.9267, 4.77614 )
-rotation = 1.11714
+position = Vector2( 30.3838, 113.256 )
 
 [node name="Zombie12" parent="." instance=ExtResource( 15 )]
-position = Vector2( -46.4407, -128.478 )
-rotation = 1.40527
+position = Vector2( 10.1953, 71.5015 )
 
 [node name="Zombie13" parent="." instance=ExtResource( 15 )]
-position = Vector2( -73.666, -82.8567 )
-rotation = 0.891636
+position = Vector2( 30.6592, -25.1636 )
 
 [node name="Zombie14" parent="." instance=ExtResource( 15 )]
-position = Vector2( -106.987, -100.666 )
-rotation = 0.496736
+position = Vector2( 75.3966, 0.790474 )
 
 [node name="Zombie15" parent="." instance=ExtResource( 15 )]
-position = Vector2( -75.6675, -28.5515 )
-rotation = 0.475778
-
-[node name="Zombie16" parent="." instance=ExtResource( 15 )]
-position = Vector2( -2.21817, -133.644 )
-rotation = 1.39446
+position = Vector2( 285.338, -3.68923 )
 
 [node name="Zombie17" parent="." instance=ExtResource( 15 )]
-position = Vector2( -114.429, -18.8052 )
-rotation = 0.707912
+position = Vector2( 95.2997, -93.1575 )
 
 [node name="Zombie18" parent="." instance=ExtResource( 15 )]
-position = Vector2( -149.731, -126.515 )
-rotation = 1.15193
+position = Vector2( -217.059, -115.099 )
 
 [node name="Zombie19" parent="." instance=ExtResource( 15 )]
-position = Vector2( -2.13376, -59.7195 )
-rotation = 1.31575
+position = Vector2( -100.859, -40.6035 )
 
 [node name="Zombie20" parent="." instance=ExtResource( 15 )]
-position = Vector2( 226.814, -59.2863 )
+position = Vector2( 328.562, -54.2409 )
 
 [node name="Zombie21" parent="." instance=ExtResource( 15 )]
-position = Vector2( 229.436, -161.92 )
+position = Vector2( 200.005, -125.762 )
 
 [node name="Zombie22" parent="." instance=ExtResource( 15 )]
-position = Vector2( 317.461, -70.149 )
+position = Vector2( 200.577, -150.875 )
 
 [node name="Zombie23" parent="." instance=ExtResource( 15 )]
-position = Vector2( -171.736, -107.981 )
-
-[node name="Zombie24" parent="." instance=ExtResource( 15 )]
-position = Vector2( -168.739, -46.1761 )
-
-[node name="Zombie25" parent="." instance=ExtResource( 15 )]
-position = Vector2( -162.746, 11.1341 )
+position = Vector2( -180.138, -101.789 )
 
 [editable path="Furniture/Couch"]
 [editable path="Furniture/Couch2"]
