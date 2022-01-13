@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/sounds/Locknar - Good Kill (A Side).mp3" type="AudioStream" id=1]
+
+[node name="BackgroundMusic" type="Node"]
+
+[node name="Music1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -20.0
+autoplay = true

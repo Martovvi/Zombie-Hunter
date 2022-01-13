@@ -24,6 +24,10 @@ config/name="Zombie Hunter"
 run/main_scene="res://game.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+BackgroundMusic="*res://scenes/BackgroundMusic.tscn"
+
 [debug]
 
 settings/fps/force_fps=120
