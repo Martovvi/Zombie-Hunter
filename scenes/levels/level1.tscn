@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://assets/sprites/textures/level1_walls.png" type="Texture" id=1]
 [ext_resource path="res://assets/sprites/textures/level1_floor.png" type="Texture" id=2]
@@ -15,6 +15,8 @@
 [ext_resource path="res://scenes/props/prop_tv.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/props/prop_vase.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/zombie.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scripts/background.gd" type="Script" id=16]
+[ext_resource path="res://assets/sprites/sprite_background.png" type="Texture" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 872.662, 14.0474 )
@@ -65,10 +67,15 @@ extents = Vector2( 10.8596, 264.174 )
 extents = Vector2( 341.899, 11.4583 )
 
 [node name="Level1" type="Node2D"]
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
+
+[node name="Background" type="Sprite" parent="."]
+scale = Vector2( 2.25013, 1.99765 )
+z_index = -10
+texture = ExtResource( 17 )
+script = ExtResource( 16 )
+
+[node name="Timer" type="Timer" parent="Background"]
+autostart = true
 
 [node name="Walls" type="StaticBody2D" parent="."]
 scale = Vector2( 0.286, 0.286 )
@@ -94,7 +101,6 @@ shape = SubResource( 3 )
 
 [node name="Wall4" type="CollisionShape2D" parent="Walls"]
 position = Vector2( 612.306, -524.476 )
-scale = Vector2( 1, 1 )
 z_index = 5
 shape = SubResource( 4 )
 
@@ -411,6 +417,8 @@ position = Vector2( 200.577, -150.875 )
 
 [node name="Zombie23" parent="." instance=ExtResource( 15 )]
 position = Vector2( -180.138, -101.789 )
+
+[connection signal="timeout" from="Background/Timer" to="Background" method="_on_Timer_timeout"]
 
 [editable path="Furniture/Couch"]
 [editable path="Furniture/Couch2"]
