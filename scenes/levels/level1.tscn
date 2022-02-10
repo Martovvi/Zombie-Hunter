@@ -276,13 +276,6 @@ rotation = 1.57064
 [node name="SpriteShadow" parent="Furniture/TV/Sprite" index="0"]
 position = Vector2( 1.42543, -7.28436 )
 
-[node name="Vase" parent="Furniture" instance=ExtResource( 14 )]
-position = Vector2( -106.148, 32.128 )
-rotation = 0.0154603
-
-[node name="SpriteShadow" parent="Furniture/Vase/Sprite" index="0"]
-position = Vector2( 1.56485, 1.94322 )
-
 [node name="Bathtub2" parent="Furniture" instance=ExtResource( 5 )]
 position = Vector2( 126.154, 106.293 )
 
@@ -353,25 +346,25 @@ position = Vector2( 361.951, -51.3185 )
 rotation = 0.0154603
 
 [node name="Zombie" parent="." instance=ExtResource( 15 )]
-position = Vector2( -212.655, -143.684 )
+position = Vector2( -159.798, -101.682 )
 
 [node name="Zombie2" parent="." instance=ExtResource( 15 )]
-position = Vector2( 71.1602, -124.303 )
+position = Vector2( 42.3721, -143.18 )
 
 [node name="Zombie3" parent="." instance=ExtResource( 15 )]
-position = Vector2( -183.16, -140.463 )
+position = Vector2( -14.6785, -120.17 )
 
 [node name="Zombie4" parent="." instance=ExtResource( 15 )]
-position = Vector2( 159.466, -152.503 )
+position = Vector2( 140.117, -124.187 )
 
 [node name="Zombie5" parent="." instance=ExtResource( 15 )]
-position = Vector2( 353.433, -147.445 )
+position = Vector2( 204.773, -88.4529 )
 
 [node name="Zombie6" parent="." instance=ExtResource( 15 )]
 position = Vector2( 257.063, 111.131 )
 
 [node name="Zombie7" parent="." instance=ExtResource( 15 )]
-position = Vector2( 78.3893, 26.8203 )
+position = Vector2( 160.506, 40.9784 )
 
 [node name="Zombie8" parent="." instance=ExtResource( 15 )]
 position = Vector2( 171.376, 104.029 )
@@ -380,43 +373,43 @@ position = Vector2( 171.376, 104.029 )
 position = Vector2( 291.301, 109.228 )
 
 [node name="Zombie10" parent="." instance=ExtResource( 15 )]
-position = Vector2( -79.0311, 28.3256 )
+position = Vector2( -36.0848, 4.2568 )
 
 [node name="Zombie11" parent="." instance=ExtResource( 15 )]
 position = Vector2( 30.3838, 113.256 )
 
 [node name="Zombie12" parent="." instance=ExtResource( 15 )]
-position = Vector2( 10.1953, 71.5015 )
+position = Vector2( 5.59911, 79.6332 )
 
 [node name="Zombie13" parent="." instance=ExtResource( 15 )]
-position = Vector2( 30.6592, -25.1636 )
+position = Vector2( -11.7624, 45.9502 )
 
 [node name="Zombie14" parent="." instance=ExtResource( 15 )]
-position = Vector2( 75.3966, 0.790474 )
+position = Vector2( 210.371, 58.3668 )
 
 [node name="Zombie15" parent="." instance=ExtResource( 15 )]
-position = Vector2( 285.338, -3.68923 )
+position = Vector2( 287.698, 27.4586 )
 
 [node name="Zombie17" parent="." instance=ExtResource( 15 )]
-position = Vector2( 95.2997, -93.1575 )
+position = Vector2( 83.5013, -143.655 )
 
 [node name="Zombie18" parent="." instance=ExtResource( 15 )]
-position = Vector2( -217.059, -115.099 )
+position = Vector2( -138.245, -50.9155 )
 
 [node name="Zombie19" parent="." instance=ExtResource( 15 )]
-position = Vector2( -100.859, -40.6035 )
+position = Vector2( -5.99963, -33.0525 )
 
 [node name="Zombie20" parent="." instance=ExtResource( 15 )]
-position = Vector2( 328.562, -54.2409 )
+position = Vector2( 109.583, -95.2994 )
 
 [node name="Zombie21" parent="." instance=ExtResource( 15 )]
-position = Vector2( 200.005, -125.762 )
+position = Vector2( 230.209, -109.244 )
 
 [node name="Zombie22" parent="." instance=ExtResource( 15 )]
-position = Vector2( 200.577, -150.875 )
+position = Vector2( 143.001, -52.7121 )
 
 [node name="Zombie23" parent="." instance=ExtResource( 15 )]
-position = Vector2( -180.138, -101.789 )
+position = Vector2( -71.1205, -71.1131 )
 
 [connection signal="timeout" from="Background/Timer" to="Background" method="_on_Timer_timeout"]
 
@@ -431,5 +424,4 @@ position = Vector2( -180.138, -101.789 )
 [editable path="Furniture/Barchair"]
 [editable path="Furniture/Barchair2"]
 [editable path="Furniture/TV"]
-[editable path="Furniture/Vase"]
 [editable path="Furniture/CoffeeTable2"]

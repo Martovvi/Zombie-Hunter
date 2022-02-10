@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/sprites/menu/options.jpg" type="Texture" id=1]
+[ext_resource path="res://scripts/options.gd" type="Script" id=2]
+
+[node name="Options" type="Sprite"]
+position = Vector2( 477.626, 274.759 )
+scale = Vector2( 0.783051, 0.798101 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.492
+anchor_top = 0.934
+anchor_right = 0.492
+anchor_bottom = 1.001
+margin_left = -1203.87
+margin_top = -396.002
+margin_right = -1089.87
+margin_bottom = -418.242
+rect_scale = Vector2( 1.48683, 1.39748 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="VBoxContainer"]
+margin_right = 114.0
+margin_bottom = 20.0
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_Back_pressed"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sprite_background.png-8dfbc3edde813ab2aa7a0b62370346fd.stex"
+path="res://.import/start buttobn.png-d0d358558209b80fd75156069f89212c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/sprite_background.png"
-dest_files=[ "res://.import/sprite_background.png-8dfbc3edde813ab2aa7a0b62370346fd.stex" ]
+source_file="res://assets/sprites/menu/start buttobn.png"
+dest_files=[ "res://.import/start buttobn.png-d0d358558209b80fd75156069f89212c.stex" ]
 
 [params]
 
@@ -28,6 +28,7 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
+process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true
